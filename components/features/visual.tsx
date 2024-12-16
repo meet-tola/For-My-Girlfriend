@@ -54,3 +54,54 @@ export const OtherVisual = ({ id }: Props) => {
     </Visual>
   );
 };
+
+export const TheBeginning = ({ id }: Props) => {
+  return (
+    <Visual id={id}>
+      <img src="/her1.jpg" />
+    </Visual>
+  );
+};
+
+export const Santorini = ({ id }: Props) => {
+  return (
+    <Visual id={id}>
+      <img src="/san.jpg" />
+    </Visual>
+  );
+};
+
+export const AddingColors = ({ id }: Props) => {
+  return (
+    <Visual id={id}>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/adding.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </Visual>
+  );
+};
+
+export const Finding = ({ id }: Props) => {
+  return (
+    <Visual id={id}>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/love.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </Visual>
+  );
+};
+

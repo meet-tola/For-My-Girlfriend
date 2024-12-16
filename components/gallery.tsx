@@ -1,12 +1,19 @@
 "use client";
 import { motion, useTransform, useScroll } from "framer-motion";
+import { Playfair_Display } from "next/font/google";
 import { useRef } from "react";
+
+const playfair = Playfair_Display({ subsets: ["latin"] });
 
 const Gallery = () => {
   return (
-    <div className="bg-neutral-800">
+    <div className="bg-neutral-900">
       <div className="flex items-center py-6 justify-center">
-        <h1 className="font-semiBold text-3xl text-white">Our Memories</h1>
+        <h1
+          className={`${playfair.className} font-semiBold text-4xl text-white`}
+        >
+          Who is She?
+        </h1>
       </div>
       <HorizontalScrollCarousel />
     </div>
@@ -35,28 +42,28 @@ const HorizontalScrollCarousel = () => {
 };
 
 const Card = ({ card }: { card: CardType }) => {
-    return (
+  return (
+    <div
+      key={card.id}
+      className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200 rounded-lg"
+    >
+      {/* Background Image */}
       <div
-        key={card.id}
-        className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200 rounded-lg"
-      >
-        {/* Background Image */}
-        <div
-          style={{
-            backgroundImage: `url(${card.url})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-          className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
-        ></div>
-  
-        {/* Caption */}
-        <div className="absolute bottom-0 left-0 z-10 w-full bg-gradient-to-r from-black/70 to-transparent p-4">
-          <p className="text-lg font-bold uppercase text-white">{card.title}</p>
-        </div>
+        style={{
+          backgroundImage: `url(${card.url})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
+      ></div>
+
+      {/* Caption */}
+      <div className="absolute bottom-0 left-0 z-10 w-full bg-gradient-to-r from-black/70 to-transparent p-4">
+        <p className="text-lg font-bold uppercase text-white">{card.title}</p>
       </div>
-    );
-  };  
+    </div>
+  );
+};
 
 export default Gallery;
 
@@ -68,38 +75,38 @@ type CardType = {
 
 const cards: CardType[] = [
   {
-    url: "/imgs/abstract/1.jpg",
-    title: "Title 1",
+    url: "/img2.jpg",
+    title: "My Lovee",
     id: 1,
   },
   {
-    url: "/imgs/abstract/2.jpg",
-    title: "Title 2",
+    url: "/img3.jpg",
+    title: "Best after mum",
     id: 2,
   },
   {
-    url: "/imgs/abstract/3.jpg",
-    title: "Title 3",
+    url: "/img4.jpg",
+    title: "Special Angel",
     id: 3,
   },
   {
-    url: "/imgs/abstract/4.jpg",
-    title: "Title 4",
+    url: "/img5.jpg",
+    title: "Ayanfe",
     id: 4,
   },
   {
-    url: "/imgs/abstract/5.jpg",
-    title: "Title 5",
+    url: "/img6.jpg",
+    title: "Ani oun to yinbo oni",
     id: 5,
   },
   {
-    url: "/imgs/abstract/6.jpg",
-    title: "Title 6",
+    url: "/img1.jpg",
+    title: "Melanin Popin",
     id: 6,
   },
   {
-    url: "/imgs/abstract/7.jpg",
-    title: "Title 7",
+    url: "/her2.jpg",
+    title: "Ali girl(Rice Girl)",
     id: 7,
   },
 ];

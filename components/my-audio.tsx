@@ -77,7 +77,7 @@ export default function MyAudio() {
   return (
     <div className="bg-white rounded-lg shadow-xl p-6 max-w-md mx-auto">
       <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-        Audio Player
+        Please Listen.
       </h3>
       <div className="flex justify-between items-center mb-4">
         <button
@@ -111,7 +111,7 @@ export default function MyAudio() {
       </div>
       <audio
         ref={audioRef}
-        src="/placeholder.svg?height=300&width=300"
+        src="/message.opus"
         onEnded={() => setIsPlaying(false)}
       />
     </div>

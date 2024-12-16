@@ -9,7 +9,7 @@ import {
   Todo,
 } from "@/components/features/card";
 import { FeatureTitle } from "@/components/features/title";
-import { MusicVisual, OtherVisual } from "@/components/features/visual";
+import { AddingColors, Finding, MusicVisual, OtherVisual, Santorini, TheBeginning } from "@/components/features/visual";
 import { useFeatureStore } from "@/components/features/store";
 import { useEffect } from "react";
 import { useHidePageOverflow } from "@/utils/toggle-page-overflow";
@@ -20,19 +20,19 @@ const features = [
     title: "The Beginning of Us",
     id: "todo-list",
     card: Todo,
-    visual: OtherVisual,
+    visual: TheBeginning,
   },
   {
     title: "Adding Colors to Our Love Story",
     id: "colors",
     card: Colors,
-    visual: OtherVisual,
+    visual: AddingColors,
   },
   {
     title: "Finding Time to Be Together",
     id: "availability",
     card: Availability,
-    visual: OtherVisual,
+    visual: Finding,
   },
   {
     title: "Our Soundtrack: The Music We Shared",
@@ -44,7 +44,7 @@ const features = [
     title: "The Little Plans We Made Together",
     id: "scheduling-links",
     card: SchedulingLinks,
-    visual: OtherVisual,
+    visual: Santorini,
   },
   {
     title: "How We Grew as a Team",

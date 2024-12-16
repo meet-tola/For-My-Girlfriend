@@ -8,6 +8,9 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({ subsets: ["latin"] });
 
 const SoSpecial = () => {
   const [cards, setCards] = useState<Card[]>(cardData);
@@ -25,9 +28,13 @@ const SoSpecial = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-pink-100 to-purple-200 p-4">
-      <div className="py-8">
-        <h1 className="font-semibold text-3xl">Why I Love You Wall</h1>
-        <p className="text-foreground">Swipe the card to see more, my loveee</p>
+      <div className="py-8 flex items-center flex-col">
+        <h1 className={`${playfair.className} font-bold text-3xl`}>
+          A Million Reasons Why You're My Everything
+        </h1>
+        <p className="text-foreground">
+          Every moment with you, I discover something new to love..
+        </p>
       </div>
 
       <div className="relative w-full max-w-sm h-[400px] mb-8">
@@ -134,14 +141,16 @@ interface Card {
 }
 
 const cardData: Card[] = [
-  { id: 1, content: "The way sunlight dances on water" },
-  { id: 2, content: "The smell of freshly brewed coffee in the morning" },
-  { id: 3, content: "The sound of laughter from loved ones" },
-  { id: 4, content: "The feeling of accomplishment after a challenging task" },
-  { id: 5, content: "The taste of your favorite comfort food" },
-  { id: 6, content: "The excitement of starting a new book" },
-  { id: 7, content: "The warmth of a hug from a close friend" },
-  { id: 8, content: "The peacefulness of a quiet night under the stars" },
+  { id: 1, content: "Your infectious laugh that brightens even the darkest days." },
+  { id: 2, content: "The way you scrunch your nose when you're think I'm lying." },
+  { id: 3, content: "Your endless generosity that shows how much you care." },
+  { id: 4, content: "How you always make sure I'm okay, even in the smallest ways." },
+  { id: 5, content: "The way you light up a room just by being in it." },
+  { id: 6, content: "Your strength and grace, even during tough times." },
+  { id: 7, content: "The little ways you show love, like remembering my favorite things." },
+  { id: 8, content: "Your ambition and the way you dream big, inspiring me to do the same." },
+  { id: 9, content: "Your smile, which feels like the most beautiful thing in the world." },
+  { id: 10, content: "The unique and irreplaceable way you make me feel loved every day." },
 ];
 
 export default SoSpecial;

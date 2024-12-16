@@ -78,7 +78,7 @@ export function EasterEgg() {
                   loop
                   muted
                   playsInline
-                  className="rounded-lg mx-auto w-[400px] h-[400px] object-cover"
+                  className="rounded-lg mx-auto w-[400px] h-[350px] object-cover"
                 >
                   <source src="/she.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
